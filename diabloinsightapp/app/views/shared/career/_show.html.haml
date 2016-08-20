@@ -10,3 +10,19 @@
   %tr
     %td Blacksmith level:
     %td= career.blacksmith.level
+
+- career.heroes.sort_by { |e| e.name }.each do |hero|
+  %h2= "#{hero.name} (Level #{hero.level})"
+  %table
+    %tr
+      %td Hero ID
+      %td= hero.id
+    %tr
+      %td Class
+      %td= hero.class
+    %tr
+      %td Gender
+      %td= hero.gender
+    %tr
+      %td Elite kills
+      %td= number_with_delimiter(hero.kills.elites)
