@@ -1,0 +1,12 @@
+-# required locals
+-# * career (career object from the Blizzard API)
+
+%h1= "#{career.battleTag} (#{career.paragonLevel})"
+
+%table
+  %tr
+    %td Guild name:
+    %td= career.guildName
+  %tr
+    %td Blacksmith level:
+    %td= career.blacksmith.level
